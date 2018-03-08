@@ -5,4 +5,4 @@ from . import dashboard_blueprint
 
 @dashboard_blueprint.route('/')
 def index():
-    return render_template('dashboard/index.html')
+    return render_template('dashboard/dashboard.html')

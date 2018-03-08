@@ -1,9 +1,19 @@
+$positive-color: #177f67;
+//$positive-darker-color: #177f67;
+$negative-color: #d44558;
+//$negative-darker-color: #af3747;
+
 .page-dashboard {
   h2 {
-    //color: #df3b76;
-    color: #333;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
+
+    color: #333;
+    //font-size: 1.1rem;
+
+    //color: #df3b76;
+    font-size: 1rem;
+    font-weight: 700;
+
     margin-bottom: 0.7rem;
   }
 
@@ -40,15 +50,20 @@
 
       .content {
         .number {
-          color: #333;
           font-size: 1.5rem;
           font-weight: 700;
-
           display: block;
 
+          //&.positive {
+          //  color: $positive-darker-color;
+          //}
+          //
+          //&.negative {
+          //  color: $negative-darker-color;
+          //}
+
           .decimal {
-            color: #444;
-            font-size: 0.7em;
+            font-weight: normal;
           }
 
           .unit {
@@ -57,21 +72,28 @@
             font-weight: 400;
             margin-left: 5px;
           }
+        }
 
-          &.smaller {
-            color: #999;
-            font-size: 0.9rem;
-            font-weight: 400;
-          }
+        .percentage {
+          color: #999;
+          font-size: 0.85rem;
+          font-weight: 400;
 
-          .positive {
-            background-color: green;
+          .positive, .negative {
             border-radius: 3px;
             color: white;
             display: inline-block;
+            font-size: 0.9rem;
             margin: 0.2rem 3px 0.1rem 0;
-            padding: 0.15rem 0.7rem 0.2rem;
+            padding: 0.2rem 0.5rem;
+          }
 
+          .positive {
+            background-color: $positive-color;
+          }
+
+          .negative {
+            background-color: $negative-color;
           }
         }
       }
@@ -98,58 +120,128 @@
     }
 
     ul {
+      border-top: 1px solid #c5cede;
       padding: 0;
 
       li {
+        border-bottom: 1px solid #c5cede;
         list-style: none;
       }
     }
 
     .fund {
-      background-color: #e5e9f1;
-      padding: 0.7rem 1rem;
+      padding: 0.7rem 1rem 1rem;
 
       .fund-code {
-        font-size: 1.1rem;
+        color: #df3b76;
+        font-size: 1.4rem;
         font-weight: bold;
+        line-height: 1.8rem;
       }
 
-      .fund-details {
+      .fund-manager {
         color: #555;
         font-size: 0.9rem;
         margin-top: 0.1rem;
+      }
 
-        .fund-name {
+      .heading {
+        color: #777;
+        display: block;
+      }
 
+      .content {
+        color: #333;
+        font-weight: bold;
+
+        .decimal {
+          font-weight: normal;
         }
 
-        .fund-manager {
-          margin-left: 10px;
+        .unit {
+          font-size: 0.9rem;
+          font-weight: normal;
+          margin-left: 2px;
         }
       }
 
-      .fund-invest {
-        .caption {
-          color: #df3b76;
-          font-size: 0.8rem;
-          font-weight: bold;
-          display: block;
+      .fund-invested {
+        margin-top: 0.7rem;
+
+        .heading {
+          font-size: 0.9rem;
         }
 
-        .value {
-          font-size: 1.2rem;
+        .content {
+          font-size: 1rem;
         }
-      }
 
-      .fund-invest {
-        margin-top: 1rem;
+        .invested-units, .invested-amount {
+          display: inline-block;
+        }
 
         .invested-units {
-          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+
+      .market-value {
+        margin-top: 0.7rem;
+
+        .heading {
+          font-size: 0.9rem;
         }
 
-        .invested-amount {
-          display: inline-block;
+        .content {
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+        }
+      }
+
+      .profit-loss {
+        margin-top: 0.7rem;
+
+        .heading {
+          font-size: 0.9rem;
+        }
+
+        .content {
+          color: #333;
+
+          .number {
+            font-weight: bold;
+
+            //&.positive {
+            //  color: $positive-darker-color;
+            //}
+            //
+            //&.negative {
+            //  color: $negative-darker-color;
+            //}
+          }
+
+          .percentage {
+            font-weight: normal;
+            display: block;
+
+            .positive, .negative {
+              border-radius: 3px;
+              color: white;
+              display: inline-block;
+              font-size: 0.9rem;
+              margin-top: 5px;
+              padding: 0.2rem 0.5rem;
+            }
+
+            .positive {
+              background-color: $positive-color;
+            }
+
+            .negative {
+              background-color: $negative-color;
+            }
+          }
+
         }
       }
     }
