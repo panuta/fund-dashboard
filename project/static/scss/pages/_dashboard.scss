@@ -1,11 +1,157 @@
 .page-dashboard {
-  header {
-    padding: 1rem 0;
+  h2 {
+    //color: #df3b76;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
   }
 
-  h1 {
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
+  .dashboard-overview {
+    border-bottom: 1px solid #c5cede;
+
+    .container-fluid {
+      padding: 0;
+    }
+
+    .col-md-4 {
+      .overview-box {
+        border-right: 1px solid #c5cede;
+      }
+
+      @include media-breakpoint-down('sm') {
+        &:last-child {
+          .overview-box {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    .overview-box {
+      font-family: 'Open Sans', sans-serif;
+      padding: 0.8rem 1rem;
+      height: 100%;
+
+      .heading {
+        color: #555;
+        font-size: 1rem;
+      }
+
+      .content {
+        .number {
+          color: #333;
+          font-size: 1.5rem;
+          font-weight: 700;
+
+          display: block;
+
+          .decimal {
+            color: #444;
+            font-size: 0.7em;
+          }
+
+          .unit {
+            color: #555;
+            font-size: 0.65em;
+            font-weight: 400;
+            margin-left: 5px;
+          }
+
+          &.smaller {
+            color: #999;
+            font-size: 0.9rem;
+            font-weight: 400;
+          }
+
+          .positive {
+            background-color: green;
+            border-radius: 3px;
+            color: white;
+            display: inline-block;
+            margin: 0.2rem 3px 0.1rem 0;
+            padding: 0.15rem 0.7rem 0.2rem;
+
+          }
+        }
+      }
+    }
+  }
+
+  .dashboard-months {
+    margin-top: 1.5rem;
+
+    h2 {
+      padding: 0 15px;
+    }
+
+    .months {
+
+    }
+  }
+
+  .dashboard-funds {
+    margin-top: 2rem;
+
+    h2 {
+      padding: 0 15px;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    .fund {
+      background-color: #e5e9f1;
+      padding: 0.7rem 1rem;
+
+      .fund-code {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      .fund-details {
+        color: #555;
+        font-size: 0.9rem;
+        margin-top: 0.1rem;
+
+        .fund-name {
+
+        }
+
+        .fund-manager {
+          margin-left: 10px;
+        }
+      }
+
+      .fund-invest {
+        .caption {
+          color: #df3b76;
+          font-size: 0.8rem;
+          font-weight: bold;
+          display: block;
+        }
+
+        .value {
+          font-size: 1.2rem;
+        }
+      }
+
+      .fund-invest {
+        margin-top: 1rem;
+
+        .invested-units {
+          display: inline-block;
+        }
+
+        .invested-amount {
+          display: inline-block;
+        }
+      }
+    }
   }
 }
